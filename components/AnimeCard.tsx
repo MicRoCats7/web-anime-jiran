@@ -39,7 +39,9 @@ function AnimeCard({ anime, index }: Prop) {
           duration: 0.5,
         }}
         viewport={{ amount: 0 }}
-        className="max-w-sm rounded relative w-full"
+        className="max-w-sm rounded relative w-full 
+        hover:transition-transform 
+        hover:scale-105 cursor-pointer transition-transform duration-300 ease-in-out"
       >
         <div className="relative w-full h-[37vh]">
           <Image
