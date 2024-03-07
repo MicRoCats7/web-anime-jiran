@@ -1,21 +1,23 @@
 'use client';
-
+import React from 'react';
 import YouTube from 'react-youtube';
 
 const VideoPlayer = ({ youtubeId }: { youtubeId: string }) => {
-    const option = {
-        width: '1000px',
+    const options = {
+        width: '100%',
         height: '600px',
-    }
+    };
 
     return (
-        <div className="flex flex-col items-center justify-center gap-4 py-10">
+        <div className="flex flex-col items-center justify-center gap-4 md:py-10 sm:pt-60 pt-96 pb-10 mt-10 md:mt-64">
             <h1 className='text-white font-bold text-5xl'>New Trailer</h1>
-            <YouTube
-                videoId={youtubeId}
-                onReady={(e) => e.target.pauseVideo}
-                opts={option}
-            />
+            <div style={{ maxWidth: '1000px', width: '100%', height: 'auto' }}>
+                <YouTube
+                    videoId={youtubeId}
+                    onReady={(e) => e.target.pauseVideo}
+                    opts={options}
+                />
+            </div>
         </div>
     );
 }
