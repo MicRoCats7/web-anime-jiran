@@ -24,12 +24,12 @@ const HeroDetailAnime = ({ anime }: { anime: any }) => {
                         height={250}
                         className="object-contain ml-10 "
                     />
-                    <div className="p-10 flex flex-col gap-4">
-                        <h1 className="text-white font-bold text-5xl">{anime?.data?.title}</h1>
+                    <div className="md:px-10 px-10 md:py-10 py-7 flex flex-col gap-4">
+                        <h1 className="text-white font-bold md:text-5xl text-3xl">{anime?.data?.title}</h1>
                         <div className="flex items-center gap-4">
                             <div className="py-[5px] px-2 bg-[#161921] rounded-lg flex items-center gap-2">
                                 <IoTimeOutline size={20} />
-                                <p className="text-white text-sm font-bold capitalize">
+                                <p className="text-white md:text-sm text-[11px] font-bold capitalize">
                                     {anime?.data?.duration}
                                 </p>
                             </div>
@@ -41,25 +41,25 @@ const HeroDetailAnime = ({ anime }: { anime: any }) => {
                                     height={20}
                                     className="object-contain"
                                 />
-                                <p className="text-base text-white font-bold">
+                                <p className="md:text-sm text-[11px] text-white font-bold">
                                     Ep {anime?.data?.episodes}
                                 </p>
                             </div>
                             <div className="flex flex-row gap-2 items-center bg-[#161921] py-1 px-2 rounded-lg">
                                 <FaStar size={20} className="text-yellow-500" />
-                                <p className="text-base text-white font-bold">
+                                <p className="md:text-sm text-[11px] text-white font-bold">
                                     {anime?.data?.score}
                                 </p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="md:flex items-center grid grid-cols-3 gap-2">
                             {anime.data.genres.map((genres: any) => (
                                 <div key={genres.mal_id} className="bg-white/10 py-1 px-2 rounded-lg">
-                                    <p className="font-semibold">{genres.name}</p>
+                                    <p className="font-semibold md:text-base text-sm">{genres.name}</p>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-white">{anime?.data?.synopsis}</p>
+                        <p className="text-white md:text-base text-sm">{anime?.data?.synopsis}</p>
                     </div>
                 </div>
             </div>

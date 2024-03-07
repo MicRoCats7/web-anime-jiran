@@ -9,7 +9,7 @@ const VideoPlayer = ({ youtubeId }: { youtubeId: string }) => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center gap-4 md:py-10 sm:pt-60 pt-96 pb-10 mt-10 md:mt-64">
+        <div className="flex flex-col items-center justify-center gap-4 md:py-10 sm:py-10 sm:pt-60 pt-72 pb-10 md:mt-64">
             <h1 className='text-white font-bold text-5xl'>New Trailer</h1>
             <div style={{ maxWidth: '1000px', width: '100%', height: 'auto' }}>
                 <YouTube
